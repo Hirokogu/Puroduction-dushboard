@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "heroku-postbuild": "npm run prod", //この記述を追加する
+        "heroku-postbuild": "npm run prod"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
