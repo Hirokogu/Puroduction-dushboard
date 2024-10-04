@@ -26,7 +26,9 @@ Route::resource('result', ResultController::class);
 Route::resource('equipment', EquipmentController::class);
 Route::resource('breakdown', BreakdownController::class);
 
-
+if (App::environment('production') || App::environment('staging')) {
+    URL::forceScheme('https');
+}
 
 
 require __DIR__.'/auth.php';
