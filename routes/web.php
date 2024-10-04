@@ -30,7 +30,3 @@ Route::resource('breakdown', BreakdownController::class);
 
 require __DIR__.'/auth.php';
 
-if (config('app.env') === 'production' or config('app.env') === 'staging') {
-    // asset()やurl()がhttpsで生成される
-    URL::forceScheme('https');
-}
