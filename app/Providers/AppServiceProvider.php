@@ -21,7 +21,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
-        if (config('app.env') === 'production') { //追記
+        if (config('app.env') === 'production') 
+        {
             URL::forceScheme('https');
         }
 
