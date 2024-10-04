@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot():void
     {
-        \Illuminate\Support\Facades\URL::forceScheme(\Str::startsWith(config('app.url'), 'https') ? 'https' : 'http');
+        
   
     }
 }
