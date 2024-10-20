@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Equipment;
 
 class Breakdown extends Model
 {
@@ -26,7 +28,7 @@ class Breakdown extends Model
     }
 
     public function Equipment(){
-        return $this->hasMany(Equipment::class);
+        return $this->belongsTo(Equipment::class);
     }
 
 }

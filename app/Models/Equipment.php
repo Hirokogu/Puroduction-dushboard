@@ -24,7 +24,7 @@ class Equipment extends Model
     }
 
     public function breakdowns(){
-        return $this->belongsTo(breakdown::class);
+        return $this->hasMany(breakdown::class);
     }
 
 }

@@ -57,10 +57,12 @@ class ResultController extends Controller
             'working_rate'=>'required|max:20',
             'JPH'=>'required|max:20',
             'body'=>'required|max:800',
-            'image'=>'required|file|image|max:2000|mimes:jpeg,jpg,png|dimensions:min_width=300,min_height=300,max_width=1200,max_height=1200',
+            'image'=>'nullable|file|image|max:2000|mimes:jpeg,jpg,png|dimensions:min_width=300,min_height=300,max_width=1200,max_height=1200',
         ]);
 
-        $validated['image'] = $request->file('image')->store('results','public');
+        if(isset($request->image)){
+            $validated['image'] = $request->file('image')->store('results','public');
+            }
 
         $validated['user_id']=auth()->id();
 

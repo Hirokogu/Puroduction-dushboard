@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('results', function (Blueprint $table) {
+            $table->id('id');
             $table->foreignId('user_id');
             $table->date('date');
             $table->string('shift');
@@ -20,6 +21,7 @@ return new class extends Migration
             $table->float('working_rate',precision: 2);
             $table->float('JPH',precision: 2);
             $table->text('body');
+            $table->string('image')->nullable(true);
             $table->timestamps();
         });
     }

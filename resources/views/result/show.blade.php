@@ -30,14 +30,21 @@
                         <div class="grid-item mt-2 text-xl text-right mx-4">JPH:</div>
                         <div class="grid-item mt-2 text-xl text-left">{{$result->JPH}}</div>
                     </div>  
+                  
                     <div class="grid grid-cols-2">
                         <div for="body" class="grid-item col-span-2 text-xl text-left">コメント:</div>
                         <div class="break-words col-span-2 grid-item ring-4 ring-blue-500/50 text-base outline-none text-gray-700 py-1 px-3">{{$result->body}}</div>
-                        <div  class="mt-4 grid-item col-span-2 text-xl text-left">
-                            <img class="h-40 mr-4 object-cover rounded-md" src="{{ asset('storage/'. $result->image)}}" alt="">
-                        </div>
-                        
+                        <div  class="grid grid-cols-2 mt-6">
+                            @if (empty($result->image))
+                                <img id="previewImage" src="{{ asset('storage/images/noimage.jpg')}}" data-noimage="{{ asset('storage/images/noimage.jpg')}}" alt="" class="rounded shadow-md w-64">
+                            @else
+                                <img class="mr-2 rounded-md mt-2" src="{{asset('storage/'. $result->image)}}" height="200" width="200" alt="">
+                            @endif
+                        </div> 
+                       
                   </div>
+
+
                 </div>
                   
                    <div class="text-right flex mt-10">
@@ -56,5 +63,7 @@
 
 </div>
 </section>
+
+
 
 </x-app-layout>

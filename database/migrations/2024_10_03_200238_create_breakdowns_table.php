@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('breakdowns', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained("users");
-            $table->foreignId('equipment_id')->constrained("equipment");
+            $table->foreignId('process_No')->constrained("equipment");
             $table->date('date');
             $table->integer('count');
             $table->timestamps();
