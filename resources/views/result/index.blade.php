@@ -49,7 +49,7 @@
                 <td class="px-2 py-3">   
                   <div class="flex justify-left items-center gap-1">
                     <div>
-                      <a href="{{Route('result.show',$result)}}">
+                      <a href="{{Route('result.show',$result->id)}}">
                         <x-primary-button class="bg-green-600">
                           詳細
                         </x-primary-button>
