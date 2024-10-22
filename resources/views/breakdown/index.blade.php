@@ -10,9 +10,8 @@
     @foreach ($breakdowns as $breakdown)
       <tr>
         <td>{{ date('Y/m/d', strtotime($breakdown->date)) }}</td>
-        <td>{{$breakdown->eqipment->equipment_name}}</td>
+        <td>{{$breakdown->equipment->process_No}}</td>
         <td>{{$breakdown->count}}</td>
-        
       </tr>
     @endforeach
     </tbody>
