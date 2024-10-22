@@ -49,21 +49,21 @@
                 <td class="px-2 py-3">   
                   <div class="flex justify-left items-center gap-1">
                     <div>
-                      <a href="{{Route('result.show',$result)}}">
+                      <a href="{{Route('result.show', $result)}}">
                         <x-primary-button class="bg-green-600">
                           詳細
                         </x-primary-button>
                       </a>
                     </div>
                     <div>
-                      <a href="{{Route('result.edit',$result)}}">
+                      <a href="{{Route('result.edit', $result)}}">
                         <x-primary-button class="bg-blue-500">
                           編集
                         </x-primary-button>
                       </a>
                     </div>
                     <div>
-                      <form action="{{route('result.destroy',$result)}}" method="post" class="">
+                      <form action="{{route('result.destroy', $result)}}" method="post" class="">
                       @csrf
                       @method('delete')
                          <x-primary-button class="bg-red-600">
