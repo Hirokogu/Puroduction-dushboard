@@ -37,7 +37,7 @@
               </tr>
             </thead>
             <tbody>
-              @foreach($results as $result)
+              @foreach($collection as $result)
               <tr @class(['text-sm','bg-gray-200' => $loop->even])>
                 <td class="px-2 py-3">{{$result->user->name}}</td>
                 <td class="px-2 py-3">{{$result->date}}</td>
