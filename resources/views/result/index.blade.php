@@ -37,7 +37,7 @@
               </tr>
             </thead>
             <tbody>
-              @foreach($collection as $result)
+              @foreach($results as $result)
               <tr @class(['text-sm','bg-gray-200' => $loop->even])>
                 <td class="px-2 py-3">{{$result->user->name}}</td>
                 <td class="px-2 py-3">{{$result->date}}</td>
@@ -49,7 +49,7 @@
                 <td class="px-2 py-3">   
                   <div class="flex justify-left items-center gap-1">
                     <div>
-                      <a href="{{route('result.show',['result'=>$result])}}">
+                      <a href="{{route('result.show',['result'=>$result->id])}}">
                         <x-primary-button class="bg-green-600">
                           詳細
                         </x-primary-button>
