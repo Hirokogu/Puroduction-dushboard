@@ -29,12 +29,11 @@ class ResultController extends Controller
         }
 
         $results = $query->paginate(10);
-        $collection = collect($results->items());
 
         //$results=Result::orderBy('date')->paginate(10);
 
 
-        return view('result.index',compact('results','collection','from','until'));
+        return view('result.index',compact('results','from','until'));
     }
 
     /**
