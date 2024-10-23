@@ -49,14 +49,14 @@
                 <td class="px-2 py-3">   
                   <div class="flex justify-left items-center gap-1">
                     <div>
-                      <a href="{{Route('result.show',['result'=>$result])}}">
+                      <a href="{{route('result.show',['result'=>$result])}}">
                         <x-primary-button class="bg-green-600">
                           詳細
                         </x-primary-button>
                       </a>
                     </div>
                     <div>
-                      <a href="{{Route('result.edit', $result)}}">
+                      <a href="{{route('result.edit', $result)}}">
                         <x-primary-button class="bg-blue-500">
                           編集
                         </x-primary-button>
