@@ -15,7 +15,6 @@
                       
                         <div class="mt-2">
                             <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">生産日</label>
-                            <x-input-error :messages="$errors->get('date')" class="mt-2"/>
                             <input type="date" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="<?php echo date('Y-m-j');?>" >
                         </div>
                         <div class="mt-2">
@@ -29,11 +28,13 @@
                             <div class="mt-2">
                                
                                 <label for="production_rate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">生産台数</label>
-                                <x-input-error :messages="$errors->get('production_rate')" class="mt-2"/>
+                                <x-input-error :messages="$errors->get('production_rate')" class="mt-2" /> 
                                 <input type="text" inputmode="numeric" name="production_rate" id="production_rate"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                             </div>
                             <div class="mt-2">
-                                <label for="production_time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">生産時間</label>
+                                
+                                <label for="production_time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">生産時間</label>   
+                                <x-input-error :messages="$errors->get('production_time')" class="mt-2" />                  
                                 <input type="text" inputmode="numeric" name="production_time" id="production_time"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                             </div>
 
@@ -41,16 +42,19 @@
 
                             <div class="mt-2">
                                 <label for="JPH" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">JPH</label>
+                                <x-input-error :messages="$errors->get('production_time')" class="mt-2" />  
                                 <input type="text" inputmode="numeric" name="JPH" id="JPH"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                             </div>
 
                             <div class="mt-2">
                                 <label for="working_rate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">可動率</label>
+                                <x-input-error :messages="$errors->get('working_rate')" class="mt-2" /> 
                                 <input type="text" inputmode="numeric" name="working_rate" id="working_rate"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                             </div>
                       
                         <div class="mt-4">
                             <label for="body" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">日報</label>
+                            <x-input-error :messages="$errors->get('body')" class="mt-2" /> 
                             <textarea type="text" name="body" id="body" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="" ></textarea>
                         </div>
 

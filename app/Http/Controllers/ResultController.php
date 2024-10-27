@@ -52,11 +52,11 @@ class ResultController extends Controller
         $validated = $request->validate([
             'date'=>'required',
             'shift'=>'required',
-            'production_rate'=>'required|max:20',
-            'production_time'=>'required|max:20',
-            'working_rate'=>'required|max:20',
-            'JPH'=>'required|max:20',
-            'body'=>'required|max:800',
+            'production_rate'=>'required|max:5000|min:0|numeric',
+            'production_time'=>'required|max:24|min:0|numeric',
+            'working_rate'=>'required|max:150|min:0|numeric',
+            'JPH'=>'required|max:300|min:0|numeric',
+            'body'=>'required|max:1000',
             'image'=>'nullable|file|image|max:2000|mimes:jpeg,jpg,png|dimensions:min_width=300,min_height=300,max_width=1200,max_height=1200',
         ]);
 
@@ -95,7 +95,7 @@ class ResultController extends Controller
         $validated = $request->validate([
             'date'=>'required',
             'shift'=>'required',
-            'production_rate'=>'required|max:20',
+            'production_rate'=>'required|max:20|digits_between:0,5000|integer|numeric',
             'production_time'=>'required|max:20',
             'working_rate'=>'required|max:20',
             'JPH'=>'required|max:20',

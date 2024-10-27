@@ -256,6 +256,10 @@ return [
         'updated_at' => '更新日',
         'username' => 'ユーザー名',
         'year' => '年',
+        'production_rate'=>'生産数',
+        'production_time'=>'生産時間',
+        'working_rate'=>'可動率',
+        'body'=>'日報',
     ],
 
 ];
